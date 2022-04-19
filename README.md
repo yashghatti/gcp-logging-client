@@ -1,2 +1,2 @@
 # gcp-logging-client
-Logging client for GCP
+Fully configured Logging client for GCP

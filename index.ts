@@ -1,6 +1,6 @@
 import {LoggingBunyan} from "@google-cloud/logging-bunyan";
 import * as bunyan from "bunyan";
-import Logger from "bunyan";
+import Logger = require("bunyan")
 import * as fs from 'fs';
 
 export class GcpLogger {

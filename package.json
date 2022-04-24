@@ -1,14 +1,16 @@
 {
   "name": "@yashghatti-auto/gcp-logging-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fully configured logging client for gcp",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./dist/* && tsc && cp ./package.json ./dist/package.json",
+    "build": "tsc",
     "pub": "npm publish"
   },
   "files": [
-    "dist/**"
+    "package.json",
+    "*.js",
+    "*.d.ts"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

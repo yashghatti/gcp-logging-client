@@ -4,9 +4,9 @@ Fully configured Logging client for GCP
 ## Usage
 
 ```typescript
-import {GcpLogger} from "@yashghatti-auto/GcpLogger";
+import {Index} from "@yashghatti-auto/Index";
 
-let logger: GcpLogger = new GcpLogger("app-name");
+let logger: Index = new Index("app-name");
 
 logger.info("Test Message");
 logger.debug("Sample",{ 

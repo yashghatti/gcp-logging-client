@@ -4,7 +4,11 @@
   "description": "Fully configured logging client for gcp",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "pub": "npm publish dist"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -17,10 +21,15 @@
   },
   "homepage": "https://github.com/yashghatti/gcp-logging-client#readme",
   "devDependencies": {
+    "@types/randomstring": "^1.1.8",
     "typescript": "^4.6.3"
   },
   "dependencies": {
     "@google-cloud/logging-bunyan": "^3.3.1",
-    "bunyan": "^1.8.15"
+    "@types/bunyan": "0.0.35",
+    "@types/bunyan-logentries": "0.1.30",
+    "bunyan": "^1.8.15",
+    "bunyan-logentries": "^1.1.2",
+    "randomstring": "^1.2.2"
   }
 }

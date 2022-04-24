@@ -5,17 +5,10 @@ import * as fs from 'fs';
 
 export class GcpLogger {
 
-    private static gcpConfiguredInstance: GcpLogger = new GcpLogger();
     private logName: string;
     private logger: Logger;
 
-    private constructor() {}
-
-    static getGcpConfiguredInstance() {
-        return this.gcpConfiguredInstance;
-    }
-
-    createLogger(appName: string) {
+    constructor(appName: string) {
 
         if(!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
             throw new Error("Missing environment variable GOOGLE_APPLICATION_CREDENTIALS, must be set to a valid GCP key file");
@@ -36,7 +29,6 @@ export class GcpLogger {
         });
         this.logger.fields.logName = appName;
         this.logName = appName;
-        return this;
     }
 
     info(msg: string, fields?: any): void {

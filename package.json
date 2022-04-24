@@ -1,11 +1,11 @@
 {
   "name": "@yashghatti-auto/gcp-logging-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fully configured logging client for gcp",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "pub": "cp package.json dist/package.json && npm publish"
+    "build": "rm -rf ./dist/* && tsc && cp ./package.json ./dist/package.json",
+    "pub": "npm publish"
   },
   "files": [
     "dist/**"

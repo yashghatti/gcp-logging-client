@@ -10,13 +10,6 @@ export class GcpLogger {
 
     constructor(appName: string) {
 
-        if(!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
-            throw new Error("Missing environment variable GOOGLE_APPLICATION_CREDENTIALS, must be set to a valid GCP key file");
-        }
-        if(!fs.existsSync(process.env.GOOGLE_APPLICATION_CREDENTIALS)){
-            throw new Error("GOOGLE_APPLICATION_CREDENTIALS value is invalid/ file does not exist");
-        }
-
         const loggingBunyan = new LoggingBunyan({
             logName: appName
         });

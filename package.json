@@ -1,6 +1,6 @@
 {
   "name": "@yashghatti-auto/gcp-logging-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fully configured logging client for gcp",
   "main": "index.js",
   "scripts": {
